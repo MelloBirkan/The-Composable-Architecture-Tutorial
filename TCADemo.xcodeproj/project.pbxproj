@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1B7F41012BC720CC00970071 /* TCADemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F41002BC720CC00970071 /* TCADemoApp.swift */; };
-		1B7F41032BC720CC00970071 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F41022BC720CC00970071 /* ContentView.swift */; };
 		1B7F41052BC720CE00970071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7F41042BC720CE00970071 /* Assets.xcassets */; };
 		1B7F41082BC720CE00970071 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7F41072BC720CE00970071 /* Preview Assets.xcassets */; };
+		1B7F410F2BC720E600970071 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F410E2BC720E600970071 /* CounterFeature.swift */; };
+		1B7F41122BC7216B00970071 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7F41112BC7216B00970071 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B7F40FD2BC720CC00970071 /* TCADemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCADemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7F41002BC720CC00970071 /* TCADemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCADemoApp.swift; sourceTree = "<group>"; };
-		1B7F41022BC720CC00970071 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B7F41042BC720CE00970071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7F41072BC720CE00970071 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B7F410E2BC720E600970071 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7F41122BC7216B00970071 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7F41002BC720CC00970071 /* TCADemoApp.swift */,
-				1B7F41022BC720CC00970071 /* ContentView.swift */,
+				1B7F410E2BC720E600970071 /* CounterFeature.swift */,
 				1B7F41042BC720CE00970071 /* Assets.xcassets */,
 				1B7F41062BC720CE00970071 /* Preview Content */,
 			);
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = TCADemo;
+			packageProductDependencies = (
+				1B7F41112BC7216B00970071 /* ComposableArchitecture */,
+			);
 			productName = TCADemo;
 			productReference = 1B7F40FD2BC720CC00970071 /* TCADemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1B7F40F42BC720CC00970071;
+			packageReferences = (
+				1B7F41102BC7216B00970071 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 1B7F40FE2BC720CC00970071 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7F41032BC720CC00970071 /* ContentView.swift in Sources */,
+				1B7F410F2BC720E600970071 /* CounterFeature.swift in Sources */,
 				1B7F41012BC720CC00970071 /* TCADemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B7F41102BC7216B00970071 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B7F41112BC7216B00970071 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B7F41102BC7216B00970071 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B7F40F52BC720CC00970071 /* Project object */;
 }
